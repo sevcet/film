@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Optimizovana Stranica</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh; /* Visina ekrana */
+            background-image: url('pozadina.jpg');
+            background-size: cover; /* Pokriva ceo ekran */
+            background-attachment: fixed; /* Fiksira pozadinsku sliku */
+            background-position: center; /* Centriranje slike */
+            background-repeat: no-repeat; /* Bez ponavljanja slike */
+        }
+        .left-side {
+            width: 15%; /* Širina leve strane */
+            background-color: black; /* Boja pozadine leve strane */
+            display: flex;
+            flex-direction: column; /* Kolone za svaki pravougaonik */
+            align-items: center;
+            justify-content: space-around; /* Raspodela prostora između pravougaonika */
+            color: white; /* Boja teksta */
+            padding: 1px 0; /* Gornji i donji padding */
+        }
+        .action-box {
+            width: 80%; /* Širina pravougaonika */
+            height: 80px; /* Visina pravougaonika */
+            background-color: black; /* Boja pravougaonika */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px; /* Razmak između pravougaonika */
+            transition: all 0.3s ease; /* Dodajemo animaciju prelaska */
+        }
+        .action-box img {
+            max-width: 100%; /* Osigurava da slika ne prelazi širinu pravougaonika */
+            max-height: 100%; /* Osigurava da slika ne prelazi visinu pravougaonika */
+        }
+        .action-box:hover {
+            width: 90%; /* Promena širine pravougaonika na hover */
+            height: 50px; /* Promena visine pravougaonika na hover */
+            background-color: #333; /* Promena boje pravougaonika na hover */
+            font-size: 18px; /* Promena veličine fonta na hover */
+            cursor: pointer; /* Promena kursora na hover */
+        }
+        .right-side-container {
+            width: 85%; /* Širina desne strane */
+            overflow-x: auto; /* Omogućava horizontalno skrolovanje */
+            white-space: nowrap; /* Osigurava da se slike ne prelaze u novi red */
+            padding: 20px; /* Dodajemo malo prostora oko pravougaonika */
+            position: relative; /* Da bismo mogli postaviti tražilicu */
+        }
+        .search-container {
+            width: 80%; /* Širina tražilice */
+            position: fixed; /* Fiksni položaj */
+            top: 0; /* Na vrhu stranice */
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 5px; /* Smanjili smo padding */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .search-container input {
+            width: calc(100% - 80px); /* Širina input polja minus širina dugmeta */
+            padding: 3px 7px; /* Smanjili smo padding */
+            font-size: 14px; /* Smanjili smo veličinu fonta */
+        }
+        .search-container button {
+            width: 60px;
+            margin-left: 10px;
+            padding: 3px; /* Smanjili smo padding */
+            font-size: 14px; /* Smanjili smo veličinu fonta */
+            cursor: pointer;
+        }
+        .right-side {
+            display: flex;
+            align-items: center;
+            justify-content: space-around; /* Raspodela prostora između pravougaonika */
+            flex-wrap: wrap; /* Omogućava da se pravougaonici prelaze u novi red */
+            max-width: 100%; /* Sve dok su u redu, neka zauzmu maksimalnu širinu */
+            padding-top: 70px; /* Dovoljno prostora za fiksnu tražilicu */
+        }
+        .rectangle {
+            width: calc(16.67% - 20px); /* Širina pravougaonika u odnosu na širinu stranice i razmak */
+            height: auto; /* Visina pravougaonika automatski */
+            background-color: blue; /* Boja pravougaonika */
+            margin-bottom: 10<a href="1.html" px; /* Razmak između pravougaonika */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .rectangle img {
+            max-width: 100%; /* Osigurava da slika ne prelazi širinu pravougaonika */
+            max-height: 100%; /* Osigurava da slika ne prelazi visinu pravougaonika */
+            transition: transform 0.3s ease; /* Dodajemo animaciju prelaska */
+        }
+        .rectangle:hover img {
+            transform: scale(1.25); /* Povećava sliku za 25% kada se pređe mišem */
+        }
+        .highlight {
+            border: 10px solid yellow; /* Podebljali smo žuti okvir */
+        }
+    </style>
+</head>
+<body>
+    <div class="left-side">
+        <a href="1.html" class="action-box"><img src="Action.jpg" alt="Action"></a>
+        <a href="1.html" class="action-box"><img src="Adventure.jpg" alt="Adventure"></a>
+        <a href="1.html" class="action-box"><img src="Comedy.jpg" alt="Comedy"></a>
+        <a href="1.html" class="action-box"><img src="Documentary.jpg" alt="Documentary"></a>
+        <a href="1.html" class="action-box"><img src="Family.jpg" alt="Family"></a>
+        <a href="1.html" class="action-box"><img src="Fantasy.jpg" alt="Fantasy"></a>
+        <a href="1.html" class="action-box"><img src="History.jpg" alt="History"></a>
+        <a href="1.html" class="action-box"><img src="Horror.jpg" alt="Horror"></a>
+        <a href="1.html" class="action-box"><img src="Romance.jpg" alt="Romance"></a>
+        <a href="1.html" class="action-box"><img src="ScFi.jpg" alt="ScFi"></a>
+        <a href="1.html" class="action-box"><img src="Thriller.jpg" alt="Thriller"></a>
+
+    </div>
+    <div class="right-side-container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pretraži slike po imenu...">
+            <button id="searchButton">Traži</button>
+        </div>
+ <div class="right-side">
+        <div class="right-side">
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/7qxG0zyt29BI0IzFDfsps62kbQi.jpg" alt="Slika 1"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/gKkl37BQuKTanygYQG1pyYgLVgf.jpg" alt="Slika 2"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zDi2U7WYkdIoGYHcYbM9X5yReVD.jpg" alt="Slika 3"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg" alt="Slika 4"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fdZpvODTX5wwkD0ikZNaClE4AoW.jpg" alt="Slika 5"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Slika 6"></a>
+        </div>
+        <div class="right-side">
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg" alt="Slika 7"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zK2sFxZcelHJRPVr242rxy5VK4T.jpg" alt="Slika 8"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/nBVYp2xxx2R02n21EGlDky8CgWR.jpg" alt="Slika 9"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Slika 10"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Slika 11"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/ldfCF9RhR40mppkzmftxapaHeTo.jpg" alt="Slika 12"></a>
+        </div>
+        <div class="right-side">
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/upKD8UbH8vQ798aMWgwMxV8t4yk.jpg" alt="Slika 13"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg" alt="Slika 14"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="Slika 15"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg" alt="Slika 16"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" alt="Slika 17"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/eVWHzm6bL4ybAuRLqA10Qo7ACfN.jpg" alt="Slika 18"></a>
+        </div>
+        <div class="right-side">
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/wJmWliwXIgZOCCVOcGRBhce7xPS.jpg" alt="Slika 19"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fSRb7vyIP8rQpL0I47P3qUsEKX3.jpg" alt="Slika 20"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/rDMKA81C7hlxCotXP844YronASW.jpg" alt="Slika 21"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/cCTJPelKGLhALq3r51A9uMonxKj.jpg" alt="Slika 22"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg" alt="Slika 23"></a>
+        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg" alt="Slika 24"></a>
+        </div>
+    </div>
+
+    <script>
+        function searchImages() {
+            var searchValue = document.getElementById('search').value.toLowerCase();
+            var rectangles = document.querySelectorAll('.rectangle');
+
+            rectangles.forEach(function(rectangle) {
+                var img = rectangle.querySelector('img');
+                var altText = img.alt.toLowerCase();
+
+                rectangle.classList.remove('highlight');
+                if (altText.includes(searchValue)) {
+                    setTimeout(function() {
+                        rectangle.classList.add('highlight');
+                        rectangle.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 100); // Mali delay da bi se osiguralo da se klasa highlight doda ispravno
+                }
+            });
+        }
+
+        document.getElementById('searchButton').addEventListener('click', searchImages);
+        document.getElementById('search').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchImages();
+            }
+        });
+    </script>
+</body>
+</html>
