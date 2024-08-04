@@ -1,24 +1,29 @@
-function searchImages() {
-    var searchValue = document.getElementById('search').value.toLowerCase();
-    var rectangles = document.querySelectorAll('.rectangle');
-
-    rectangles.forEach(function(rectangle) {
-        var img = rectangle.querySelector('img');
-        var altText = img.alt.toLowerCase();
-
-        rectangle.classList.remove('highlight');
-        if (altText.includes(searchValue)) {
-            setTimeout(function() {
-                rectangle.classList.add('highlight');
-                rectangle.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 100); // Mali delay da bi se osiguralo da se klasa highlight doda ispravno
-        }
-    });
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const menuIcon = document.querySelector('.menu-icon');
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px';
+    } else {
+        sidebar.style.left = '0px';
+    }
 }
 
-document.getElementById('searchButton').addEventListener('click', searchImages);
-document.getElementById('search').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        searchImages();
+function searchMovies() {
+    const input = document.getElementById('search-input').value.toLowerCase();
+    const movieCards = document.querySelectorAll('.movie-card');
+    let found = false;
+
+    movieCards.forEach(card => {
+        const title = card.querySelector('.movie-info h3').textContent.toLowerCase();
+        if (title.includes(input)) {
+            card.style.display = 'block';
+            found = true;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    if (found) {
+        window.scrollTo({ top: document.querySelector('.movie-grid').offsetTop, behavior: 'smooth' });
     }
-});
+}

@@ -3,63 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Optimizovana Stranica</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styless.css">
+    <title>Movie Gallery</title>
 </head>
 <body>
-    <div class="left-side">
-        <a href="index.html" class="action-box"><img src="Action.jpg" alt="Action"></a>
-        <a href="01.html" class="action-box"><img src="Adventure.jpg" alt="Adventure"></a>
-        <a href="02.html" class="action-box"><img src="Comedy.jpg" alt="Comedy"></a>
-        <a href="03.html" class="action-box"><img src="Documentary.jpg" alt="Documentary"></a>
-        <a href="04.html" class="action-box"><img src="Family.jpg" alt="Family"></a>
-        <a href="05.html" class="action-box"><img src="Fantasy.jpg" alt="Fantasy"></a>
-        <a href="06.html" class="action-box"><img src="History.jpg" alt="History"></a>
-        <a href="07.html" class="action-box"><img src="Horror.jpg" alt="Horror"></a>
-        <a href="08.html" class="action-box"><img src="Romance.jpg" alt="Romance"></a>
-        <a href="09.html" class="action-box"><img src="ScFi.jpg" alt="ScFi"></a>
-        <a href="10.html" class="action-box"><img src="Thriller.jpg" alt="Thriller"></a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div id="sidebar" class="sidebar">
+        <a href="1.html" class="close-btn" onclick="toggleMenu()">&times;</a>
+        <a href="1.html">Discover</a>
+        <a href="#">Movies</a>
+        <a href="#">Watch live soccer</a>
+        <a href="#">TV Shows</a>
+        <a href="#">HD Releases</a>
+        <a href="#">Calendar</a>
+        <a href="#">Live TV</a>
     </div>
-    <div class="right-side-container">
+    <div class="header">
+        <h1>Science Fiction</h1>
         <div class="search-container">
-            <input type="text" id="search" placeholder="Pretraži slike po imenu...">
-            <button id="searchButton">Traži</button>
+            <input type="text" id="search-input" placeholder="Search for movies..." oninput="searchMovies()">
+            <button id="search-button" onclick="searchMovies()">Search</button>
         </div>
- <div class="right-side">
-        <div class="right-side">
-        <a href="653346.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/jHV0bDiAqzzgtoHiJ03LhBPB05o.jpg" alt="Kingdom of the Planet of the Apes"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/gKkl37BQuKTanygYQG1pyYgLVgf.jpg" alt="Slika 2"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zDi2U7WYkdIoGYHcYbM9X5yReVD.jpg" alt="Slika 3"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg" alt="Slika 4"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fdZpvODTX5wwkD0ikZNaClE4AoW.jpg" alt="Slika 5"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Slika 6"></a>
-        </div>
-        <div class="right-side">
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg" alt="Slika 7"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zK2sFxZcelHJRPVr242rxy5VK4T.jpg" alt="Slika 8"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/nBVYp2xxx2R02n21EGlDky8CgWR.jpg" alt="Slika 9"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Slika 10"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Slika 11"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/ldfCF9RhR40mppkzmftxapaHeTo.jpg" alt="Slika 12"></a>
-        </div>
-        <div class="right-side">
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/upKD8UbH8vQ798aMWgwMxV8t4yk.jpg" alt="Slika 13"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg" alt="Slika 14"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="Slika 15"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg" alt="Slika 16"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" alt="Slika 17"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/eVWHzm6bL4ybAuRLqA10Qo7ACfN.jpg" alt="Slika 18"></a>
-        </div>
-        <div class="right-side">
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/wJmWliwXIgZOCCVOcGRBhce7xPS.jpg" alt="Slika 19"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fSRb7vyIP8rQpL0I47P3qUsEKX3.jpg" alt="Slika 20"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/rDMKA81C7hlxCotXP844YronASW.jpg" alt="Slika 21"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/cCTJPelKGLhALq3r51A9uMonxKj.jpg" alt="Slika 22"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg" alt="Slika 23"></a>
-        <a href="1.html" class="rectangle"><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg" alt="Slika 24"></a>
+    </div>
+    <div class="container1">
+        <div class="movie-grid">
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/7qxG0zyt29BI0IzFDfsps62kbQi.jpg" alt="Deadpool & Wolverine">
+                <div class="movie-info">
+                    <h3>Deadpool & Wolverine</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/gKkl37BQuKTanygYQG1pyYgLVgf.jpg" alt="A Quiet Place: Day One">
+                <div class="movie-info">
+                    <h3>A Quiet Place: Day One</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <!-- Dodajte slike u drugom redu -->
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zDi2U7WYkdIoGYHcYbM9X5yReVD.jpg" alt="Kingdom of the Planet of the Apes">
+                <div class="movie-info">
+                    <h3>Kingdom of the Planet of the Apes</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg" alt="Justice League: Crisis">
+                <div class="movie-info">
+                    <h3>Justice League: Crisis</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fdZpvODTX5wwkD0ikZNaClE4AoW.jpg" alt="Furiosa: A Mad Max Story">
+                <div class="movie-info">
+                    <h3>Furiosa: A Mad Max Story</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Escape from the 21st Century">
+                <div class="movie-info">
+                    <h3>Escape from the 21st Century</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <!-- Dodajte slike u drugom redu -->
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/7qxG0zyt29BI0IzFDfsps62kbQi.jpg" alt="Deadpool & Wolverine">
+                <div class="movie-info">
+                    <h3>Deadpool & Wolverine</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/gKkl37BQuKTanygYQG1pyYgLVgf.jpg" alt="A Quiet Place: Day One">
+                <div class="movie-info">
+                    <h3>A Quiet Place: Day One</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zDi2U7WYkdIoGYHcYbM9X5yReVD.jpg" alt="Kingdom of the Planet of the Apes">
+                <div class="movie-info">
+                    <h3>Kingdom of the Planet of the Apes</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg" alt="Justice League: Crisis">
+                <div class="movie-info">
+                    <h3>Justice League: Crisis</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fdZpvODTX5wwkD0ikZNaClE4AoW.jpg" alt="Furiosa: A Mad Max Story">
+                <div class="movie-info">
+                    <h3>Furiosa: A Mad Max Story</h3>
+                    <p>2024</p>
+                </div>
+            </a>
+            <a href="2.html" class="movie-card">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Escape from the 21st Century">
+                <div class="movie-info">
+                    <h3>Escape from the 21st Century</h3>
+                    <p>2024</p>
+                </div>
+            </a>
         </div>
     </div>
     <script src="script.js"></script>
-    <script src="script3.js"></script>
 </body>
 </html>
