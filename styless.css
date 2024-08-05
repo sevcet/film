@@ -148,32 +148,41 @@ body {
 #search-button:hover {
     background-color: #666;
 }
+
 #virtual-keyboard {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
+    background-color: #333; /* Pozadina tastature */
     padding: 10px;
-    z-index: 1000; /* Iznad drugih elemenata */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
 .keyboard-row {
     display: flex;
     justify-content: center;
-    margin: 5px 0;
+    margin-bottom: 5px;
 }
 
 .keyboard-key {
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: #555;
+    background-color: white; /* Boja pozadine dugmića */
+    color: black; /* Boja teksta na dugmićima */
+    border: none;
     border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 18px;
     cursor: pointer;
-    user-select: none; /* Sprečava selektovanje teksta na dugmadima */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
 
 .keyboard-key:hover {
-    background-color: #666;
+    background-color: #fff12f; /* Boja pri hoveru */
+}
+
+.keyboard-key:active {
+    background-color: bbb; /* Boja pri kliku */
 }
