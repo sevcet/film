@@ -37,6 +37,20 @@ function showKeyboard() {
 function addCharacter(char) {
     const input = document.getElementById('search-input');
     input.value += char;
+    input.focus(); // Fokusiraj input polje nakon dodavanja karaktera
+}
+
+// Funkcija za brisanje poslednjeg karaktera
+function deleteCharacter() {
+    const input = document.getElementById('search-input');
+    input.value = input.value.slice(0, -1);
+    input.focus(); // Fokusiraj input polje nakon brisanja karaktera
+}
+
+// Funkcija za potvrdu pretrage
+function confirmSearch() {
+    searchMovies(); // Poziva funkciju za pretragu
+    document.getElementById('virtual-keyboard').style.display = 'none'; // Sakriva tastaturu
 }
 
 // Povezivanje prikazivanja tastature na fokus input polja
@@ -45,7 +59,8 @@ document.getElementById('search-input').addEventListener('focus', showKeyboard);
 // Povezivanje dugmadi virtuelne tastature sa funkcijom addCharacter
 document.querySelectorAll('.keyboard-key').forEach(key => {
     key.addEventListener('click', function() {
-        addCharacter(this.textContent);
-        document.getElementById('search-input').focus(); // Fokusiraj input polje nakon dodavanja karaktera
+        if (!this.hasAttribute('onclick')) {
+            addCharacter(this.textContent);
+        }
     });
 });
