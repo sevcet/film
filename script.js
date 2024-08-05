@@ -1,6 +1,5 @@
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
-    const menuIcon = document.querySelector('.menu-icon');
     if (sidebar.style.left === '0px') {
         sidebar.style.left = '-250px';
     } else {
@@ -27,3 +26,26 @@ function searchMovies() {
         window.scrollTo({ top: document.querySelector('.movie-grid').offsetTop, behavior: 'smooth' });
     }
 }
+
+// Funkcija za prikazivanje virtuelne tastature
+function showKeyboard() {
+    const keyboard = document.getElementById('virtual-keyboard');
+    keyboard.style.display = 'block';
+}
+
+// Funkcija za unos teksta sa virtuelne tastature
+function addCharacter(char) {
+    const input = document.getElementById('search-input');
+    input.value += char;
+}
+
+// Povezivanje prikazivanja tastature na fokus input polja
+document.getElementById('search-input').addEventListener('focus', showKeyboard);
+
+// Povezivanje dugmadi virtuelne tastature sa funkcijom addCharacter
+document.querySelectorAll('.keyboard-key').forEach(key => {
+    key.addEventListener('click', function() {
+        addCharacter(this.textContent);
+        document.getElementById('search-input').focus(); // Fokusiraj input polje nakon dodavanja karaktera
+    });
+});

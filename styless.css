@@ -148,3 +148,32 @@ body {
 #search-button:hover {
     background-color: #666;
 }
+#virtual-keyboard {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; /* Iznad drugih elemenata */
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.keyboard-key {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none; /* Sprečava selektovanje teksta na dugmadima */
+}
+
+.keyboard-key:hover {
+    background-color: #666;
+}
