@@ -72,23 +72,21 @@ body {
     width: calc(100% - 250px); /* Prilagođava širinu da ne pokriva meni */
     background-color: #1c1c1c;
     z-index: 1000;
+    margin-bottom: 20px; /* Povećajte vrednost da dodate više prostora između header-a i slika */
 }
 
 .header h1 {
     margin: 0;
     font-size: 24px;
     color: white;
-    margin-right
     margin-right: 30px;
 }
 
 .movie-grid {
+    margin-top: 50px; /* Povećajte vrednost da bi slike bile niže */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Prikazuje slike u više redova */
-    gap: 20px;
-    overflow-x: auto; /* Omogućava horizontalno skrolovanje */
-    white-space: nowrap; /* Sprečava prelazak redova na sledeći red */
-    padding-bottom: 20px; /* Dodaje prostor za skrolovanje */
+    gap: 10px; /* Smanjuje razmak između slika */
 }
 
 .movie-card {
@@ -96,8 +94,8 @@ body {
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    display: inline-block; /* Omogućava horizontalno skrolovanje */
-    vertical-align: top;
+    display: block;
+    text-decoration: none; /* Uklanja podvlačenje linkova */
 }
 
 .movie-card img {
@@ -106,30 +104,26 @@ body {
 }
 
 .movie-info {
-    padding: 10px;
+    padding: 5px 0; /* Smanjuje prostor ispod slike */
+    color: #fff;
 }
 
 .movie-info h3 {
-    margin: 10px 0 5px 0;
-    font-size: 16px;
-    color: #fff; /* Boja naslova je sada bela */
+    margin: 0;
+    font-size: 14px;
 }
 
 .movie-info p {
-    margin: 0;
-    color: #fff; /* Boja teksta ispod naslova je sada bela */
+    margin: 2px 0; 
+    font-size: 12px;
 }
-a.movie-card {
-    display: block; /* Omogućava da <a> tag zauzme celu širinu movie-card */
-    text-decoration: none; /* Uklanja podvlačenje linkova */
-}
-
 
 /* Pretraživač i dugme za pretragu */
 .search-container {
     display: flex;
     align-items: center;
     margin-left: auto; /* Pomera pretraživač na desnu stranu */
+    margin-right: 20px; /* Dodatni razmak sa desne strane */
 }
 
 #search-input {
